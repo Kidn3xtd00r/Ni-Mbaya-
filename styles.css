@@ -1,91 +1,71 @@
-/* =========================================================
-   🇰🇪 NI MBAYA KENYAN FLAG UI SYSTEM
-   ========================================================= */
+/* ==================================================
+   🇰🇪 NI MBAYA DESIGN SYSTEM
+   An accountability partner with a Kenyan twist.
+   ================================================== */
 
 :root {
-  /* Enables consistent UI rendering */
+  /* Consistent browser rendering */
   color-scheme: dark;
 
   /* =========================
-     BACKGROUND (FLAG BASE)
-     ========================= */
-
-  --bg: #0b0c10;
-  /* Dark neutral base for modern UI depth */
-
-  /* =========================
-     KENYAN FLAG COLORS
+     CORE COLORS
      ========================= */
 
   --black: #000000;
-
   --red: #ce1126;
-  /* Kenyan flag red (strength / urgency / action) */
-
   --green: #006600;
-  /* Kenyan green (growth / success / life) */
-
   --white: #ffffff;
-  /* peace / clarity / contrast */
 
   /* =========================
      UI SURFACES
      ========================= */
 
+  --bg: #0b0c10;
   --surface: #111418;
-  /* card background */
-
   --surface-strong: #0a0c10;
-  /* deep modal / elevated layer */
 
   /* =========================
-     TEXT SYSTEM (FIXED FOR DARK UI)
+     TEXT
      ========================= */
 
   --text: #f5f7fa;
-  /* FIX: light text for dark background */
-
   --muted: rgba(255, 255, 255, 0.65);
 
   /* =========================
-     ACCENTS (FLAG INSPIRED)
+     ACCENTS
      ========================= */
 
   --electric: #00c853;
-  /* green energy / streaks */
-
   --danger: #ce1126;
-  /* red alerts / relapse warnings */
-
   --neutral: #ffffff;
 
   /* =========================
-     SHADOW
-     ========================= */
-
-  --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
-
-  /* =========================
-     SHAPE SYSTEM
+     DESIGN TOKENS
      ========================= */
 
   --radius: 28px;
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.45);
 }
 
-/* =========================
+/* ==================================================
    GLOBAL PAGE STYLING
-   ========================= */
+   ================================================== */
 
 html,
 body {
   margin: 0;
   min-height: 100%;
 
-  /* FIXED: cleaner + smoother flag-inspired gradient */
-  background: linear-gradient(180deg, #000000 0%, #ce1126 50%, #006600 100%);
-
-  color: var(--text);
   font-family: "Manrope", sans-serif;
+  color: var(--text);
+
+  /* Kenyan flag inspired background */
+  background: linear-gradient(
+    180deg,
+    var(--black) 0%,
+    var(--red) 50%,
+    var(--green) 100%
+  );
 }
 
 img {
@@ -107,7 +87,7 @@ a {
   width: min(1200px, calc(100% - 24px));
   margin: 0 auto;
 }
-
+/* THIS IS THE NAVIGATION BAR */
 .topbar {
   display: flex;
   align-items: center;
@@ -154,6 +134,7 @@ a {
   padding: 12px 18px;
 }
 
+/* <!-- THIS IS THE LANDING PAGE OF THE APP --> */
 .hero {
   display: grid;
   gap: 28px;
@@ -291,6 +272,7 @@ a {
   place-items: center;
 }
 
+/* <!-- THIS IS THE MASCOT CARD OF THE APP --> */
 .mascot-card {
   position: relative;
   width: min(360px, 100%);
@@ -403,6 +385,9 @@ a {
     transparent 34%
   );
 }
+/* ==========================================
+   WHY NI MBAYA? TIMELINE SECTION
+   ========================================== */
 
 .section {
   padding: 46px 0;
@@ -420,6 +405,8 @@ a {
   line-height: 1.05;
 }
 
+/* Main section containers */
+
 .cards-section,
 .feature-section,
 .chat-section,
@@ -430,11 +417,12 @@ a {
 .squad-section,
 .testimonial-section,
 .final-cta {
-  background: white;
   border-radius: 40px;
   box-shadow: var(--shadow);
   padding: 32px;
 }
+
+/* Grid layouts */
 
 .timeline-grid,
 .feature-grid,
@@ -449,254 +437,503 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
+/* Individual timeline card */
+
 .timeline-card {
   padding: 26px;
   border-radius: 28px;
-  background: linear-gradient(180deg, #f9fffa 0%, #effff4 100%);
-  box-shadow: 0 20px 40px rgba(12, 59, 20, 0.06);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.12),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* Timeline label */
 
 .timeline-day {
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--charcoal);
+
+  color: var(--electric);
+
   margin-bottom: 12px;
 }
+
+/* Timeline description */
 
 .timeline-card p {
   margin: 0;
   font-size: 1rem;
   line-height: 1.7;
+
   color: var(--text);
 }
+/* ==========================================
+   HOW IT ALL WORKS SECTION
+   ========================================== */
 
 .feature-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+/* Individual Feature Card */
+
 .feature-card {
   padding: 28px;
   border-radius: 32px;
-  background: linear-gradient(180deg, #fbfffe 0%, #eefbf4 100%);
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  box-shadow: 0 24px 50px rgba(2, 44, 16, 0.06);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.12),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.3);
 }
+
+/* Feature Icon */
 
 .feature-icon {
   width: 56px;
   height: 56px;
+
   display: grid;
   place-items: center;
+
   border-radius: 18px;
-  background: rgba(0, 210, 91, 0.12);
+
+  background: rgba(0, 200, 83, 0.15);
+
+  color: var(--electric);
+
   font-size: 1.5rem;
   margin-bottom: 18px;
 }
 
+/* Feature Title */
+
 .feature-card h3 {
   margin: 0 0 12px;
+  color: var(--text);
 }
+
+/* Feature Description */
 
 .feature-card p {
   margin: 0;
-  color: var(--muted);
+  line-height: 1.7;
+  color: rgba(245, 247, 250, 0.75);
 }
+
+/* ==========================================
+   ACCOUNTABILITY CHAT SECTION
+   Users motivate, challenge, and support
+   each other inside accountability squads.
+   ========================================== */
 
 .chat-grid {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+/* Base Chat Bubble */
+
 .chat-bubble {
+  position: relative;
+
   padding: 18px 22px;
   border-radius: 28px;
-  position: relative;
-  line-height: 1.6;
-  box-shadow: var(--shadow);
+
+  line-height: 1.7;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* Received Message */
 
 .chat-bubble.received {
-  background: #f7f7f3;
-  color: var(--charcoal);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.1),
+      transparent 40%
+    ),
+    #111418;
+
+  color: var(--text);
+
   text-align: left;
 }
 
+/* Sent Message */
+
 .chat-bubble.sent {
-  background: #eef8ff;
-  color: #10203f;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(206, 17, 38, 0.12),
+      transparent 40%
+    ),
+    #171b20;
+
+  color: var(--text);
+
   text-align: left;
 }
+
+/* Bubble Tails */
 
 .chat-bubble.received::after,
 .chat-bubble.sent::after {
   content: "";
+
   position: absolute;
   bottom: 14px;
+
   width: 18px;
   height: 18px;
+
   background: inherit;
+
   border-radius: 5px 0 0 5px;
 }
+
+/* Left Bubble Tail */
 
 .chat-bubble.received::after {
   left: -8px;
   transform: rotate(30deg);
 }
 
+/* Right Bubble Tail */
+
 .chat-bubble.sent::after {
   right: -8px;
   transform: rotate(-30deg);
 }
+/* ==========================================
+   MEET MBAYA SECTION
+   The mascot representing temptation,
+   excuses, and bad habits.
+   ========================================== */
 
 .mascot-grid {
   grid-template-columns: repeat(auto-fit, minmax(206px, 1fr));
 }
 
+/* Mascot Card */
+
 .mascot-card {
   display: grid;
   gap: 18px;
+
   padding: 28px;
-  background: linear-gradient(180deg, #f8fff9 0%, #eefff0 100%);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.1),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(206, 17, 38, 0.08),
+      transparent 40%
+    ),
+    #111418;
+
   border-radius: 32px;
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.3);
 }
+
+/* Progress Badge */
 
 .mascot-progress {
   display: inline-flex;
+  align-items: center;
+
+  width: fit-content;
+
   padding: 10px 14px;
-  background: rgba(0, 210, 91, 0.14);
+
+  background: rgba(0, 200, 83, 0.15);
+
+  border: 1px solid rgba(0, 200, 83, 0.25);
+
   border-radius: 999px;
+
   font-size: 0.85rem;
   font-weight: 700;
-  color: #0b5d29;
+
+  color: var(--electric);
 }
+
+/* Card Title */
 
 .mascot-card h3 {
   margin: 0;
+  color: var(--text);
 }
+
+/* Card Description */
+
+.mascot-card p {
+  margin: 0;
+
+  line-height: 1.7;
+
+  color: rgba(245, 247, 250, 0.75);
+}
+
+/* ==========================================
+   STREAK JOURNEY SECTION
+   Track your progress and milestones.
+   ========================================== */
 
 .journey-track {
   display: grid;
   gap: 18px;
+
   padding: 22px;
   border-radius: 32px;
-  background: linear-gradient(180deg, #ffffff 0%, #f2fff6 100%);
-  box-shadow: var(--shadow);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.12),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* Individual Milestone */
 
 .journey-point {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   gap: 16px;
+
   padding: 18px 22px;
-  background: #f9fdf8;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.01)
+  );
+
   border-radius: 24px;
-  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
+
+/* Milestone Label */
 
 .journey-point span {
   font-size: 0.95rem;
   font-weight: 700;
+
   color: var(--electric);
 }
 
+/* Milestone Description */
+
 .journey-point strong {
-  color: var(--charcoal);
+  color: var(--text);
 }
+
+/* ==========================================
+   SAVINGS CALCULATOR
+   See how much money you're keeping
+   by beating Mbaya.
+   ========================================== */
 
 .savings-shell {
   display: grid;
   gap: 24px;
 }
 
+/* Main Cards */
+
 .savings-card,
 .savings-results {
   padding: 28px;
+
   border-radius: 32px;
-  background: linear-gradient(180deg, #ffffff 0%, #fafffc 100%);
-  box-shadow: var(--shadow);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.12),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* Form Label */
 
 .savings-card label {
   display: block;
   margin-bottom: 12px;
+
   font-weight: 700;
+  color: var(--text);
 }
+
+/* Input Container */
 
 .input-group {
   display: flex;
   align-items: center;
   gap: 12px;
-  background: #f5f7f6;
+
   padding: 14px 16px;
+
+  background: rgba(255, 255, 255, 0.04);
+
   border-radius: 18px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+/* Currency Label */
+
 .input-group span {
-  color: var(--muted);
+  color: rgba(245, 247, 250, 0.65);
   font-weight: 700;
 }
+
+/* Input Field */
 
 input[type="number"] {
   width: 100%;
+
   border: none;
+  outline: none;
+
   background: transparent;
+
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--charcoal);
-  outline: none;
+
+  color: var(--text);
 }
+
+/* Helper Text */
 
 .savings-tip {
   margin: 14px 0 0;
-  color: var(--muted);
+
+  color: rgba(245, 247, 250, 0.65);
+
+  line-height: 1.6;
 }
+
+/* Summary Grid */
 
 .savings-summary {
   display: grid;
   gap: 16px;
+
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+/* Summary Boxes */
+
 .savings-summary div {
   padding: 22px;
+
   border-radius: 28px;
-  background: #f5fff5;
-  border: 1px solid rgba(0, 210, 91, 0.14);
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 200, 83, 0.12),
+    rgba(0, 200, 83, 0.05)
+  );
+
+  border: 1px solid rgba(0, 200, 83, 0.15);
 }
+
+/* Summary Label */
 
 .savings-summary span {
   display: block;
-  color: var(--muted);
+
   margin-bottom: 8px;
+
+  color: rgba(245, 247, 250, 0.65);
 }
+
+/* Summary Amount */
 
 .savings-summary strong {
   font-size: 1.5rem;
-  color: var(--charcoal);
+  color: var(--text);
 }
+
+/* Reward Items */
 
 .savings-items {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
   gap: 12px;
+
   margin-top: 22px;
 }
+
+/* Reward Chip */
 
 .savings-items span {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+
   padding: 12px 14px;
+
   border-radius: 18px;
-  background: #fcfff8;
-  color: #17451f;
+
+  background: rgba(0, 200, 83, 0.1);
+
+  border: 1px solid rgba(0, 200, 83, 0.15);
+
+  color: var(--text);
+
   font-size: 0.95rem;
 }
+/* ==========================================
+   PANIC BUTTON SECTION
+   Emergency anti-relapse system.
+   This is the “Mbaya is winning” moment UI.
+   ========================================== */
 
 .panic-card {
   display: grid;
@@ -712,14 +949,32 @@ input[type="number"] {
   gap: 18px;
 }
 
+/* ==========================================
+   LIVE PANIC PANEL
+   ========================================== */
+
 .panic-panel {
   display: grid;
   gap: 14px;
+
   padding: 22px;
+
   border-radius: 28px;
-  background: #fff3f3;
-  border: 1px solid rgba(240, 69, 69, 0.18);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(206, 17, 38, 0.18),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(206, 17, 38, 0.25);
+
+  box-shadow: 0 20px 50px rgba(206, 17, 38, 0.15);
 }
+
+/* Stats inside panic panel */
 
 .panic-panel div {
   display: flex;
@@ -727,69 +982,118 @@ input[type="number"] {
   gap: 16px;
 }
 
+/* Key values */
+
 .panic-panel strong {
-  color: var(--charcoal);
+  color: var(--text);
 }
+
+/* Warning message */
 
 .panic-message {
   padding: 18px;
   border-radius: 24px;
-  background: #fff8e0;
-  color: #6c5215;
+
+  background: rgba(206, 17, 38, 0.12);
+
+  border: 1px solid rgba(206, 17, 38, 0.25);
+
+  color: var(--text);
+
   font-weight: 700;
 }
+
+/* ==========================================
+   PANIC MODAL (FULL SCREEN INTERRUPTION)
+   ========================================== */
 
 .panic-modal {
   position: fixed;
   inset: 0;
+
   display: grid;
   place-items: center;
-  background: rgba(17, 19, 21, 0.45);
+
+  background: rgba(0, 0, 0, 0.75);
+
   padding: 24px;
+
   z-index: 20;
 }
 
+/* Modal Card */
+
 .panic-modal-card {
   width: min(520px, 100%);
+
   padding: 28px;
+
   border-radius: 36px;
-  background: linear-gradient(180deg, #ffffff 0%, #ffefef 100%);
-  box-shadow: var(--shadow);
+
+  background:
+    radial-gradient(circle at top, rgba(206, 17, 38, 0.15), transparent 50%),
+    #111418;
+
+  border: 1px solid rgba(206, 17, 38, 0.25);
+
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
 }
+
+/* Modal Label */
 
 .modal-label {
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: #d34040;
+
+  color: var(--danger);
+
   font-weight: 800;
+
   margin-bottom: 10px;
 }
 
+/* Title */
+
 .panic-modal-card h3 {
   margin: 0 0 18px;
+  color: var(--text);
 }
+
+/* List */
 
 .panic-modal-card ul {
   list-style: none;
+
   padding: 0;
   margin: 0 0 22px;
+
   display: grid;
   gap: 12px;
 }
 
 .panic-modal-card li {
-  color: var(--charcoal);
+  color: var(--text);
 }
 
+/* Note */
+
 .modal-note {
-  color: var(--muted);
+  color: rgba(245, 247, 250, 0.65);
   line-height: 1.7;
   margin-bottom: 18px;
 }
 
+/* Hidden utility */
+
 .hidden {
   display: none !important;
 }
+
+/* ==========================================
+   COMMUNITY / SQUAD SECTION
+   Accountability squads: users push each
+   other to stay disciplined and avoid Mbaya.
+   ========================================== */
 
 .squad-grid {
   display: grid;
@@ -797,55 +1101,121 @@ input[type="number"] {
   gap: 16px;
 }
 
+/* ==========================================
+   SQUAD CARD (GROUP ENERGY)
+   ========================================== */
+
 .squad-card {
   padding: 20px;
   border-radius: 28px;
-  background: #f4fff0;
-  border: 1px solid rgba(0, 210, 91, 0.16);
-  box-shadow: 0 20px 40px rgba(8, 61, 24, 0.08);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.12),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
+
+/* Squad Title */
 
 .squad-card strong {
   display: block;
   font-size: 1.1rem;
+
   margin-bottom: 8px;
+
+  color: var(--text);
 }
+
+/* ==========================================
+   SQUAD NOTICE (GROUP WARNING / INSIGHT)
+   ========================================== */
 
 .squad-notice {
   margin-top: 18px;
   padding: 22px;
   border-radius: 26px;
-  background: #fffbe8;
-  border: 1px solid rgba(255, 209, 0, 0.18);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(255, 209, 0, 0.08),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 209, 0, 0.15);
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
+
+/* Notice Title */
 
 .squad-notice strong {
   display: block;
   margin-top: 8px;
-  color: var(--charcoal);
+
+  color: var(--text);
 }
+
+/* ==========================================
+   PERSONAL TESTIMONIES SECTION
+   Real users sharing their wins vs Mbaya.
+   ========================================== */
 
 .testimonial-grid {
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
 
+/* ==========================================
+   TESTIMONIAL CARD
+   ========================================== */
+
 .testimonial-card {
   padding: 26px;
   border-radius: 32px;
-  background: #f7f7f7;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 200, 83, 0.1),
+      transparent 40%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
 }
+
+/* Testimonial Text */
 
 .testimonial-card p {
   margin: 0 0 16px;
+
   font-size: 1rem;
   line-height: 1.7;
+
+  color: var(--text);
 }
 
+/* User Name / Tag */
+
 .testimonial-card span {
-  color: var(--muted);
+  color: rgba(245, 247, 250, 0.65);
+
   font-size: 0.95rem;
 }
+/* ==========================================
+   FINAL MESSAGE SECTION
+   The decision moment: You vs Mbaya.
+   ========================================== */
 
 .final-shell {
   display: grid;
@@ -853,75 +1223,145 @@ input[type="number"] {
   align-items: center;
 }
 
+/* Text Side */
+
 .final-copy h2 {
   font-size: clamp(2.6rem, 4vw, 4rem);
   margin: 0 0 18px;
+
+  color: var(--text);
 }
 
 .final-copy p {
-  color: var(--muted);
+  color: rgba(245, 247, 250, 0.65);
+
   margin-bottom: 24px;
+
+  line-height: 1.7;
 }
+
+/* ==========================================
+   VISUAL SECTION
+   ========================================== */
 
 .final-visual {
   display: grid;
   place-items: center;
 }
 
+/* Main Illustration Card */
+
 .final-illustration {
   position: relative;
+
   width: min(420px, 100%);
   aspect-ratio: 1.3;
+
   border-radius: 42px;
+
   background:
-    radial-gradient(circle at top, rgba(0, 210, 91, 0.16), transparent 35%),
-    linear-gradient(180deg, #ffffff 0%, #eefdf7 100%);
-  box-shadow: var(--shadow);
+    radial-gradient(circle at top, rgba(0, 200, 83, 0.14), transparent 40%),
+    radial-gradient(
+      circle at bottom right,
+      rgba(206, 17, 38, 0.1),
+      transparent 45%
+    ),
+    #111418;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.4);
+
   overflow: hidden;
 }
 
-.final-user,
-.final-mbaya {
-  position: absolute;
-  border-radius: 999px;
-}
+/* ==========================================
+   YOU (USER SIDE)
+   ========================================== */
 
 .final-user {
+  position: absolute;
+
   width: 130px;
   height: 130px;
+
   bottom: 18px;
   left: 22px;
+
+  border-radius: 999px;
+
   background: linear-gradient(135deg, #2c7be5, #6d95ff);
-  box-shadow: 0 22px 48px rgba(44, 123, 229, 0.3);
+
+  box-shadow: 0 22px 48px rgba(44, 123, 229, 0.25);
 }
 
+/* ==========================================
+   MBAYA (TEMPTATION SIDE)
+   ========================================== */
+
 .final-mbaya {
+  position: absolute;
+
   width: 120px;
   height: 120px;
+
   top: 32px;
   right: 36px;
+
+  border-radius: 999px;
+
   background: linear-gradient(135deg, #00cf68, #17a862);
-  box-shadow: 0 20px 40px rgba(0, 210, 91, 0.25);
+
+  box-shadow: 0 20px 40px rgba(0, 200, 83, 0.2);
 }
+/* ==========================================
+   FOOTER SECTION
+   Final subtle layer of the NI MBAYA system.
+   ========================================== */
 
 .footer {
   display: grid;
   gap: 18px;
+
   padding: 28px 0 42px;
+
   text-align: center;
-  color: var(--muted);
+
+  color: rgba(245, 247, 250, 0.55);
 }
+
+/* Footer Links Container */
 
 .footer-links {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+
   gap: 18px;
 }
 
+/* Footer Links */
+
 .footer-links a {
-  color: var(--muted);
+  color: rgba(245, 247, 250, 0.55);
+
+  transition: color 0.2s ease;
 }
+
+/* Hover State (important for usability) */
+
+.footer-links a:hover {
+  color: var(--electric);
+}
+
+/* ==========================================
+   RESPONSIVE SYSTEM + MOTION LAYER
+   NI MBAYA adaptive layout + subtle energy
+   ========================================== */
+
+/* =========================
+   TABLET + DESKTOP LAYOUTS
+   ========================= */
 
 @media (min-width: 768px) {
   .topbar {
@@ -932,6 +1372,7 @@ input[type="number"] {
     display: flex;
   }
 
+  /* HERO GRID */
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -953,29 +1394,88 @@ input[type="number"] {
     min-height: 520px;
   }
 
+  /* PANIC SECTION LAYOUT */
   .panic-card {
     grid-template-columns: 0.95fr 0.9fr;
     align-items: center;
   }
 
+  /* SAVINGS SECTION LAYOUT */
   .savings-shell {
     grid-template-columns: 1fr 1.3fr;
   }
 }
 
+/* =========================
+   MOTION SYSTEM (NI MBAYA ENERGY FLOW)
+   ========================= */
+
+/* Floating energy = “discipline breathing” feel */
 @keyframes float {
-  0%,
-  100% {
-    transform: translateX(-50%) translateY(0px);
+  0% {
+    transform: translateY(0px);
   }
+
   50% {
-    transform: translateX(-50%) translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }
 
+/* Subtle pulse for attention elements (CTAs, alerts) */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 rgba(0, 200, 83, 0);
+  }
+
+  50% {
+    box-shadow: 0 0 25px rgba(0, 200, 83, 0.25);
+  }
+
+  100% {
+    box-shadow: 0 0 0 rgba(0, 200, 83, 0);
+  }
+}
+
+/* Soft fade-in for sections */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility animation classes */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+.animate-fade {
+  animation: fade-up 0.6s ease-out forwards;
+}
+
+/* =========================
+   ACCESSIBILITY (IMPORTANT)
+   ========================= */
+
 @media (prefers-reduced-motion: reduce) {
   * {
-    scroll-behavior: auto;
+    scroll-behavior: auto !important;
+  }
+
+  * {
     animation: none !important;
     transition: none !important;
   }
