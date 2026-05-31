@@ -118,6 +118,14 @@ a {
   font-size: 0.9rem;
 }
 
+.brand-logo {
+  height: 100px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 .nav-toggle {
   display: inline-flex;
   align-items: center;
