@@ -6,7 +6,7 @@
     <title>NI MBAYA | Kenyan Accountability App</title>
     <meta
       name="description"
-      content="NI MBAYA is the Kenyan app that remembers what you promised yourself. Build streaks, quit bad habits, save money, and beat Mbaya."
+      content="MALEBO is the Kenyan app that remembers what you promised yourself. Build streaks, quit bad habits, save money, and beat Mbaya."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,12 +15,17 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+    />
   </head>
   <body>
-    <!--THIS IS ....NI MBAYA.... AN ACCOUNTABILITY PARTNER THAT HAS A KENYAN TWIST TO IT-->
+    <!--THIS IS ....MALEBO.... AN ACCOUNTABILITY PARTNER THAT HAS A KENYAN TWIST TO IT-->
     <div class="page-shell">
       <!--THE HEADER /* THIS IS THE NAVIGATION BAR */-->
       <header class="topbar">
+        <!-- THIS IS THE MALEBO LOGO ON THE TOP LEFT END OF THE APP -->
         <div class="brand">
           <img
             src="Malebo/Malebo  logo black.jpg"
@@ -28,22 +33,56 @@
             class="brand-logo"
           />
         </div>
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="main-nav"
-          type="button"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          ☰
-        </button>
-        <nav id="main-nav" class="nav-links" aria-hidden="true">
-          <a href="#hero">Home</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#calculator">Savings</a>
-          <a href="#final-cta" class="nav-cta">Start</a>
-        </nav>
-      </header>
+ <!-- NAVBAR ACTION ROW -->
+<div class="nav-actions">
+
+  <!-- TOGGLE -->
+  <button
+    class="nav-toggle"
+    aria-expanded="false"
+    aria-controls="main-nav"
+    type="button"
+    id="navToggle"
+    title="Menu"
+  >
+    <span class="material-symbols-outlined">menu</span>
+  </button>
+
+  <!-- MOBILE DROPDOWN (ICONS + LABELS) -->
+  <nav id="main-nav" class="nav-links" aria-hidden="true">
+
+    <a href="#hero">
+      <span class="material-symbols-outlined">home</span>
+      Home
+    </a>
+
+    <!-- STREAK -->
+    <div class="chip streak" id="streakChip">
+      <span class="material-symbols-outlined">electric_bolt</span>
+      <span>27</span>
+    </div>
+
+    <!-- SAVINGS -->
+    <div class="chip savings" id="savingsChip">
+      <span class="material-symbols-outlined">account_balance_wallet</span>
+      <span>KSh 4,250</span>
+    </div>
+
+     <a href="#profile">
+      <span class="material-symbols-outlined">account_circle</span>
+      Profile
+    </a>
+
+     <a href="#settings">
+      <span class="material-symbols-outlined">settings</span>
+      Settings
+    </a>
+
+  </nav>
+
+</div>
+
+</div>
 
       <main>
         <!-- THIS IS THE LANDING PAGE OF THE APP -->
