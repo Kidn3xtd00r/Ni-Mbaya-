@@ -57,7 +57,7 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-
+  padding-top: 50px;
   font-family: "Manrope", sans-serif;
   color: var(--text);
 
@@ -91,31 +91,56 @@ a {
 }
 
 .topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 72px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-  padding: 16px 0;
-  width: 100%;
-  flex-wrap: wrap;
-  position: relative;
-  z-index: 10;
-}
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.98) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+
+  z-index: 1000;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+.topbar-inner {
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  gap: 30px;
+  padding-bottom: 30px;
+}
+/*         <!-- THS IS THE LOGO ON THE LEFT -->
+ */
 .brand {
   display: inline-flex;
   align-items: center;
   gap: 10px;
 }
-
-.brand-chip {
-  background: linear-gradient(135deg, var(--electric), #00a86b);
-  color: #101217;
-  padding: 11px 16px;
-  border-radius: 999px;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  font-size: 0.9rem;
+.brand-logo {
+  height: 100px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.brand-logo:hover {
+  transform: scale(1.03);
 }
 
 .nav-toggle {
@@ -235,9 +260,10 @@ a {
 
 /* <!-- THIS IS THE LANDING PAGE OF THE APP --> */
 .hero {
+  top: 72px;
   display: grid;
   gap: 28px;
-  padding: 16px 0 42px;
+  padding: 0 0 42px;
 }
 
 .hero-copy {
@@ -348,20 +374,6 @@ a {
 .hero-hype {
   display: grid;
   gap: 16px;
-}
-
-.hype-chip {
-  width: fit-content;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 200, 83, 0.16),
-    rgba(255, 255, 255, 0.08)
-  );
-  color: var(--text);
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 700;
-  border: 1px solid rgba(0, 200, 83, 0.2);
 }
 
 .hero-stats {

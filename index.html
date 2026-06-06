@@ -18,28 +18,38 @@
   </head>
   <body>
     <!--THIS IS ....NI MBAYA.... AN ACCOUNTABILITY PARTNER THAT HAS A KENYAN TWIST TO IT-->
+    <!-- THIS IS THE MAIN PAGE SHELL -->
     <div class="page-shell">
       <!--THE HEADER /* THIS IS THE NAVIGATION BAR */-->
       <header class="topbar">
-        <div class="brand">
-          <span class="brand-chip">NI MBAYA</span>
-          <span class="brand-flag">🇰🇪</span>
+        <div class="topbar-inner">
+          <div class="brand">
+            <img
+              src="Images/Malebo/Malebo  logo black.jpg"
+              alt="Malebo Logo"
+              class="brand-logo"
+            />
+          </div>
+
+          <button
+            class="nav-toggle"
+            aria-expanded="false"
+            aria-controls="main-nav"
+            type="button"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            ☰
+          </button>
+
+          <nav id="main-nav" class="nav-links" aria-hidden="true">
+            <a href="#hero">Home</a>
+            <a href="streak.html">Streak</a>
+            <a href="savings.html">Savings</a>
+            <a href="panic.html">Panic Button</a>
+            <a href="community.html">Community</a>
+            <a href="#final-cta" class="nav-cta">Settings</a>
+          </nav>
         </div>
-        <button
-          class="nav-toggle"
-          aria-expanded="false"
-          aria-controls="main-nav"
-          type="button"
-        >
-          <span class="sr-only">Toggle navigation</span>
-          ☰
-        </button>
-        <nav id="main-nav" class="nav-links" aria-hidden="true">
-          <a href="#hero">Home</a>
-          <a href="#how-it-works">How it works</a>
-          <a href="#calculator">Savings</a>
-          <a href="#final-cta" class="nav-cta">Start</a>
-        </nav>
       </header>
 
       <main>
@@ -56,13 +66,15 @@
               Become disciplined.
             </p>
             <div class="hero-actions">
-              <a href="#how-it-works" class="btn btn-primary"
-                >START MY STREAK</a
+              <a href="streak.html" class="btn btn-primary">
+                START MY STREAK
+              </a>
+
+              <a href="how-it-works.html" class="btn btn-secondary"
+                >HOW IT WORKS</a
               >
-              <a href="#how-it-works" class="btn btn-secondary">HOW IT WORKS</a>
             </div>
             <div class="hero-hype">
-              <div class="hype-chip">Msee ako focused.</div>
               <div class="hero-stats">
                 <div class="stat-card green">🔥 47 Day Streak</div>
                 <div class="stat-card yellow">💰 KSh 9,400 Saved</div>
@@ -96,85 +108,6 @@
 
             <!-- Glow stays for premium feel -->
             <div class="visual-glow"></div>
-          </div>
-        </section>
-        <!-- THIS IS THE REASON FOR THE APP LIKW WHY????? -->
-        <section class="section cards-section" id="why">
-          <div class="section-heading">
-            <span class="section-eyebrow">WHY NI MBAYA EXISTS</span>
-            <h2>Everyone says they'll start tomorrow.</h2>
-          </div>
-          <div class="timeline-grid">
-            <article class="timeline-card">
-              <div class="timeline-day">MONDAY</div>
-              <p>"This time I'm serious."</p>
-            </article>
-            <article class="timeline-card">
-              <div class="timeline-day">FRIDAY</div>
-              <p>"Ni moja tu."</p>
-            </article>
-            <article class="timeline-card">
-              <div class="timeline-day">SUNDAY</div>
-              <p>"Kesho officially."</p>
-            </article>
-          </div>
-        </section>
-
-        <!-- THIS IS THE HOW IT WORKS SECTION -->
-        <section class="section feature-section" id="how-it-works">
-          <div class="section-heading">
-            <span class="section-eyebrow">HOW IT WORKS</span>
-            <h2>Simple features. Serious results.</h2>
-          </div>
-          <div class="feature-grid">
-            <article class="feature-card">
-              <div class="feature-icon">✅</div>
-              <h3>Daily Check-In</h3>
-              <p>
-                "Msee, leo hali iko aje?" Users check in every day and keep the
-                app in their corner.
-              </p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">🔥</div>
-              <h3>Build Streaks</h3>
-              <p>
-                Every day counts. Watch your streak grow and your Mbaya get
-                smaller.
-              </p>
-            </article>
-            <article class="feature-card">
-              <div class="feature-icon">📲</div>
-              <h3>Stay Accountable</h3>
-              <p>
-                The app remembers. Even when you don't want it to. It’s your
-                reminder and your hype squad.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <!-- THIS IS THE CHAT SECTION WHERE ACCOUNTS CAN SEE EACH OTHER CHAT -->
-        <section class="section chat-section" id="chat">
-          <div class="section-heading">
-            <span class="section-eyebrow"
-              >THE FUNNIEST ACCOUNTABILITY APP IN KENYA</span
-            >
-            <h2>WhatsApp energy, Nairobi humor.</h2>
-          </div>
-          <div class="chat-grid">
-            <div class="chat-bubble received">
-              Boss, tulikuwa day 18. Nani alikushow urudi?
-            </div>
-            <div class="chat-bubble sent">
-              Msee, hii discipline imeanza kutisha.
-            </div>
-            <div class="chat-bubble received">Tumekusamehe. Endelea.</div>
-            <div class="chat-bubble sent">GitHub yako imekuita mara 12.</div>
-            <div class="chat-bubble received">
-              Wallet yako inataka kuongea na wewe.
-            </div>
-            <div class="chat-bubble sent">Bro. Ni mbaya.</div>
           </div>
         </section>
 
@@ -215,186 +148,6 @@
                 Discipline is your flex. The bad habit creature is almost gone.
               </p>
             </article>
-          </div>
-        </section>
-
-        <!-- THIS IS YOUR STREAK JOURNEY SECTION -->
-        <section class="section journey-section" id="journey">
-          <div class="section-heading">
-            <span class="section-eyebrow">STREAK JOURNEY</span>
-            <h2>Your roadmap from Day 1 to Legend of the Republic.</h2>
-          </div>
-          <div class="journey-track">
-            <div class="journey-point">
-              <span>Day 1</span><strong>The Beginning</strong>
-            </div>
-            <div class="journey-point">
-              <span>Day 7</span><strong>Weekend Survivor</strong>
-            </div>
-            <div class="journey-point">
-              <span>Day 30</span><strong>Certified Discipline</strong>
-            </div>
-            <div class="journey-point">
-              <span>Day 100</span><strong>Village Elder</strong>
-            </div>
-            <div class="journey-point">
-              <span>Day 365</span><strong>Legend of the Republic</strong>
-            </div>
-          </div>
-        </section>
-        <!-- THIS IS THE SAVINGS SECTION - HOW MUCH YOUR SAVING -->
-        <section class="section savings-section" id="calculator">
-          <div class="section-heading">
-            <span class="section-eyebrow">MONEY SAVED</span>
-            <h2>Make your savings feel real.</h2>
-          </div>
-          <div class="savings-shell">
-            <div class="savings-card">
-              <label for="dailyAmount">Your daily saving</label>
-              <div class="input-group">
-                <span>KSh</span>
-                <input id="dailyAmount" type="number" min="0" value="200" />
-              </div>
-              <p class="savings-tip">
-                Tip: cut one small habit and watch the savings stack.
-              </p>
-            </div>
-            <div class="savings-results">
-              <div class="savings-summary">
-                <div>
-                  <span>30 Days</span>
-                  <strong id="daysValue">30</strong>
-                </div>
-                <div>
-                  <span>Saved</span>
-                  <strong id="savedValue">KSh 6,000</strong>
-                </div>
-              </div>
-              <div class="savings-items">
-                <span>✓ New Shoes</span>
-                <span>✓ Gym Membership</span>
-                <span>✓ Date Night</span>
-                <span>✓ Data Bundles</span>
-                <span>✓ Chicken Feed</span>
-                <span>✓ Weekend Trip</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!--/* THIS IS THE PANIC BUTTON ,LIKE WOW IM ABOUT TO RELAPSE   -->
-        <section class="section panic-section" id="panic">
-          <div class="panic-card">
-            <div class="panic-copy">
-              <span class="section-eyebrow">THE PANIC BUTTON</span>
-              <h2>Before you relapse, check what you’ve built.</h2>
-              <p>
-                Large dramatic support for the moment you feel weak. This is
-                your accountability superpower.
-              </p>
-              <button id="panicButton" class="btn btn-danger">
-                I'M ABOUT TO RELAPSE
-              </button>
-            </div>
-            <div class="panic-preview">
-              <div class="panic-panel">
-                <div><strong>Your streak</strong><span>Day 23</span></div>
-                <div>
-                  <strong>Your reason</strong
-                  ><span>Started to save for trip</span>
-                </div>
-                <div><strong>Money saved</strong><span>KSh 4,600</span></div>
-              </div>
-              <div class="panic-message">
-                Boss. Before ufanye hii kitu, kumbuka ulianza kwanini.
-              </div>
-            </div>
-          </div>
-          <div id="panicModal" class="panic-modal hidden">
-            <div class="panic-modal-card">
-              <p class="modal-label">Hold up.</p>
-              <h3>Before ufanye hii kitu...</h3>
-              <ul>
-                <li>Your streak is at <strong>Day 23</strong>.</li>
-                <li>Your mind already chose <strong>trip savings</strong>.</li>
-                <li>You’ve kept <strong>KSh 4,600</strong> away from Mbaya.</li>
-              </ul>
-              <p class="modal-note">
-                This app’s superpower is making your progress louder than the
-                temptation.
-              </p>
-              <button id="closePanic" class="btn btn-secondary">
-                Stay on track
-              </button>
-            </div>
-          </div>
-        </section>
-        <!-- THIS IS THE COMMUNITY ENGAGEMENT SECTION -->
-        <section class="section squad-section" id="squad">
-          <div class="section-heading">
-            <span class="section-eyebrow">ACCOUNTABILITY SQUAD</span>
-            <h2>Supportive brotherhood, no shame.</h2>
-          </div>
-          <div class="squad-grid">
-            <div class="squad-card">
-              <strong>Joe</strong>
-              <span>Day 19</span>
-            </div>
-            <div class="squad-card">
-              <strong>Brian</strong>
-              <span>Day 42</span>
-            </div>
-            <div class="squad-card">
-              <strong>Kevin</strong>
-              <span>Day 7</span>
-            </div>
-          </div>
-          <div class="squad-notice">
-            <p>Notification example:</p>
-            <strong>"Your guy almost gave up today. Check on him."</strong>
-          </div>
-        </section>
-
-        <!-- /* PERSONAL TESTIMONIES */ -->
-        <section class="section testimonial-section" id="testimonials">
-          <div class="section-heading">
-            <span class="section-eyebrow">TESTIMONIALS</span>
-            <h2>Real Nairobi energy, fictional stories that feel true.</h2>
-          </div>
-          <div class="testimonial-grid">
-            <article class="testimonial-card">
-              <p>"I came for the jokes. Stayed for the streak."</p>
-              <span>— Amina, 26</span>
-            </article>
-            <article class="testimonial-card">
-              <p>"This app knows me too well."</p>
-              <span>— Kevin, 31</span>
-            </article>
-            <article class="testimonial-card">
-              <p>"First app that actually made accountability fun."</p>
-              <span>— Shani, 22</span>
-            </article>
-            <article class="testimonial-card">
-              <p>"Mbaya alikuwa ananishinda. Sasa ni mimi namshinda."</p>
-              <span>— Juma, 29</span>
-            </article>
-          </div>
-        </section>
-
-        <!-- THIS IS THE FINAL MESSAGE TO THE USER -->
-        <section class="section final-cta" id="final-cta">
-          <div class="final-shell">
-            <div class="final-copy">
-              <h2>Become the person you keep talking about.</h2>
-              <p>One check-in. One day. One streak at a time.</p>
-              <a href="#hero" class="btn btn-primary btn-large">START TODAY</a>
-            </div>
-            <div class="final-visual">
-              <div class="final-illustration">
-                <div class="final-user"></div>
-                <div class="final-mbaya"></div>
-              </div>
-            </div>
           </div>
         </section>
       </main>
