@@ -57,9 +57,9 @@ html,
 body {
   margin: 0;
   min-height: 100%;
-  padding-top: 50px;
   font-family: "Manrope", sans-serif;
   color: var(--text);
+  scroll-behavior: smooth;
 
   /* Kenyan flag inspired background */
   background: linear-gradient(
@@ -91,17 +91,18 @@ a {
 }
 
 .topbar {
-  position: fixed;
-  top: 0;
-  left: 0;
+  position: relative;
+  top: 10px;
+  left: 10%;
+  width: 80%;
 
-  width: 100%;
-  height: 72px;
+  padding: 8px 16px;
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+
   border-radius: 30px;
+
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0.95) 0%,
@@ -109,35 +110,55 @@ a {
     rgba(0, 0, 0, 1) 100%
   );
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-
-  z-index: 1000;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
+
 .topbar-inner {
-  max-width: 1100px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  gap: 30px;
-  padding-bottom: 30px;
+}
+.profile-btn {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.07);
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: white;
+  font-size: 1.2rem;
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  border: 2px solid rgba(255, 255, 255, 0.15);
+
+  transition: transform 0.2s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.05);
 }
 /*         <!-- THS IS THE LOGO ON THE LEFT -->
  */
 .brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
+  justify-self: center;
 }
 .brand-logo {
-  height: 100px;
+  height: 80px;
   width: auto;
   display: block;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 .brand-logo:hover {
   transform: scale(1.03);
@@ -145,8 +166,7 @@ a {
 
 .nav-toggle {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  justify-self: end;
   width: 48px;
   height: 48px;
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1497,45 +1517,97 @@ input[type="number"] {
   box-shadow: 0 20px 40px rgba(0, 200, 83, 0.2);
 }
 /* ==========================================
-   FOOTER SECTION
-   Final subtle layer of the NI MBAYA system.
+   BOTTOM NAVBAR
    ========================================== */
 
 .footer {
-  display: grid;
-  gap: 18px;
+  position: fixed;
+  bottom: 10px;
+  left: 10%;
+  width: 80%;
 
-  padding: 28px 0 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  text-align: center;
+  padding: 12px;
 
-  color: rgba(245, 247, 250, 0.55);
+  border-radius: 30px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.95) 0%,
+    rgba(0, 0, 0, 0.98) 60%,
+    rgba(0, 0, 0, 1) 100%
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+
+  backdrop-filter: blur(20px);
+
+  z-index: 1000;
 }
 
-/* Footer Links Container */
+/* Action Buttons Container */
 
 .footer-links {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
 
-  gap: 18px;
+  width: 100%;
+  gap: 12px;
 }
 
-/* Footer Links */
+/* Action Buttons */
 
 .footer-links a {
-  color: rgba(245, 247, 250, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  transition: color 0.2s ease;
+  min-width: 60px;
+  height: 60px;
+
+  border-radius: 18px;
+
+  color: var(--text);
+
+  background: rgba(255, 255, 255, 0.05);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+
+  text-decoration: none;
 }
 
-/* Hover State (important for usability) */
+/* Hover Animation */
 
 .footer-links a:hover {
-  color: var(--electric);
+  transform: translateY(-2px);
+
+  background: rgba(0, 200, 83, 0.14);
+
+  border-color: rgba(0, 200, 83, 0.24);
 }
 
+/* Active Button */
+
+.footer-links a.active {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 200, 83, 0.18),
+    rgba(255, 255, 255, 0.08)
+  );
+
+  border-color: rgba(0, 200, 83, 0.35);
+}
 /* ==========================================
    RESPONSIVE SYSTEM + MOTION LAYER
    NI MBAYA adaptive layout + subtle energy
