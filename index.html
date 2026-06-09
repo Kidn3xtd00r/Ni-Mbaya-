@@ -14,111 +14,102 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="CSS/background.css" />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/header.css" />
   </head>
   <body>
     <!--THIS IS ....NI MBAYA.... AN ACCOUNTABILITY PARTNER THAT HAS A KENYAN TWIST TO IT-->
-    <!-- THIS IS THE MAIN PAGE SHELL -->
-    <div class="page-shell">
-      <!--THE HEADER /* THIS IS THE NAVIGATION BAR */-->
-      <header class="topbar">
-        <div class="topbar-inner">
-          <!-- User Avatar -->
-          <button class="profile-btn">👤</button>
+    <!-- 
+    <div id="background"></div>
 
-          <!-- Malebo Logo -->
-          <div class="brand">
-            <img
-              src="Images/Malebo/Malebo  logo black.jpg"
-              alt="Malebo Logo"
-              class="brand-logo"
-            />
+    <script>
+      loadComponent("background", "components/background.html");
+    </script>
+    -->
+    <!-- THIS IS THE HEADER COMPONENT, THE NAV BAR THAT IS LOADED BY THE FOLLOWING JS -->
+
+    <div id="header"></div>
+
+    <script>
+      fetch("components/header.html")
+        .then((res) => res.text())
+
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+    </script>
+
+    <main>
+      <!-- THIS IS THE LANDING PAGE OF THE APP -->
+      <section class="hero" id="hero">
+        <div class="hero-copy">
+          <h1>BRO...<br />NI MBAYA.</h1>
+          <p class="hero-lead">
+            The accountability app that calls you out, cheers you on, and
+            remembers what you promised yourself.
+          </p>
+          <p class="hero-support">
+            Build streaks. Beat bad habits. Save money. Stay accountable. Become
+            disciplined.
+          </p>
+          <div class="hero-actions">
+            <a href="streak.html" class="btn btn-primary"> START MY STREAK </a>
+
+            <a href="how-it-works.html" class="btn btn-secondary"
+              >HOW IT WORKS</a
+            >
           </div>
-
-          <!-- Hamburger -->
-          <button
-            class="nav-toggle"
-            aria-expanded="false"
-            aria-controls="main-nav"
-            type="button"
-          >
-            ☰
-          </button>
+          <div class="hero-hype">
+            <div class="hero-stats">
+              <div class="stat-card green">🔥 47 Day Streak</div>
+              <div class="stat-card yellow">💰 KSh 9,400 Saved</div>
+              <div class="stat-card charcoal">💪 Discipline Level 8</div>
+            </div>
+          </div>
         </div>
-      </header>
+        <!-- THIS IS THE MASCOT CARD OF THE APP -->
+        <!-- THIS IS THE MASCOT CARD OF THE APP -->
+        <div class="hero-visual" aria-label="Malebo mascot illustration">
+          <div class="mascot-card">
+            <!-- Badge renamed -->
+            <div class="mascot-badge">MALEBO</div>
 
-      <main>
-        <!-- THIS IS THE LANDING PAGE OF THE APP -->
-        <section class="hero" id="hero">
-          <div class="hero-copy">
-            <h1>BRO...<br />NI MBAYA.</h1>
-            <p class="hero-lead">
-              The accountability app that calls you out, cheers you on, and
-              remembers what you promised yourself.
-            </p>
-            <p class="hero-support">
-              Build streaks. Beat bad habits. Save money. Stay accountable.
-              Become disciplined.
-            </p>
-            <div class="hero-actions">
-              <a href="streak.html" class="btn btn-primary">
-                START MY STREAK
-              </a>
+            <div class="mascot-body">
+              <!-- Eyes (same structure, but now Malebo identity) -->
+              <div class="mascot-eye left"></div>
+              <div class="mascot-eye right"></div>
 
-              <a href="how-it-works.html" class="btn btn-secondary"
-                >HOW IT WORKS</a
-              >
+              <!-- Expression system (you can later animate these based on state) -->
+              <div class="mascot-smile"></div>
+
+              <!-- Personality features -->
+              <div class="mascot-horn"></div>
+              <div class="mascot-tail"></div>
             </div>
-            <div class="hero-hype">
-              <div class="hero-stats">
-                <div class="stat-card green">🔥 47 Day Streak</div>
-                <div class="stat-card yellow">💰 KSh 9,400 Saved</div>
-                <div class="stat-card charcoal">💪 Discipline Level 8</div>
-              </div>
-            </div>
+
+            <!-- Energy layer stays (important for vibe) -->
+            <div class="mascot-flames"></div>
           </div>
-          <!-- THIS IS THE MASCOT CARD OF THE APP -->
-          <!-- THIS IS THE MASCOT CARD OF THE APP -->
-          <div class="hero-visual" aria-label="Malebo mascot illustration">
-            <div class="mascot-card">
-              <!-- Badge renamed -->
-              <div class="mascot-badge">MALEBO</div>
 
-              <div class="mascot-body">
-                <!-- Eyes (same structure, but now Malebo identity) -->
-                <div class="mascot-eye left"></div>
-                <div class="mascot-eye right"></div>
+          <!-- Glow stays for premium feel -->
+          <div class="visual-glow"></div>
+        </div>
+      </section>
+    </main>
 
-                <!-- Expression system (you can later animate these based on state) -->
-                <div class="mascot-smile"></div>
+    <!-- THIS IS THE FOOTER OF THE PAGE -->
+    <footer class="footer">
+      <nav id="main-nav" class="nav-links" aria-hidden="true">
+        <a href="streak.html">Streak</a>
+        <a href="savings.html">Savings</a>
+        <a href="panic.html">Panic Button</a>
+        <a href="community.html">Community</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </footer>
 
-                <!-- Personality features -->
-                <div class="mascot-horn"></div>
-                <div class="mascot-tail"></div>
-              </div>
-
-              <!-- Energy layer stays (important for vibe) -->
-              <div class="mascot-flames"></div>
-            </div>
-
-            <!-- Glow stays for premium feel -->
-            <div class="visual-glow"></div>
-          </div>
-        </section>
-      </main>
-
-      <!-- THIS IS THE FOOTER OF THE PAGE -->
-      <footer class="footer">
-        <nav id="main-nav" class="nav-links" aria-hidden="true">
-          <a href="streak.html">Streak</a>
-          <a href="savings.html">Savings</a>
-          <a href="panic.html">Panic Button</a>
-          <a href="community.html">Community</a>
-          <a href="settings.html">Settings</a>
-        </nav>
-      </footer>
-    </div>
-
+    <script src="js/loader.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
