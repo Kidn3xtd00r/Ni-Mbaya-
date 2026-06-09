@@ -111,5 +111,37 @@
 
     <script src="js/loader.js"></script>
     <script src="script.js"></script>
+    <script>
+      fetch("components/header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // ✅ NOW HEADER EXISTS → attach JS safely
+
+          const toggle = document.querySelector(".nav-toggle");
+          const menu = document.querySelector("#main-nav");
+
+          const profile = document.querySelector(".profile-btn");
+          const account = document.querySelector("#accountPanel");
+
+          // Hamburger
+          toggle.addEventListener("click", () => {
+            menu.classList.toggle("open");
+          });
+
+          // Profile open
+          profile.addEventListener("click", () => {
+            account.classList.add("open");
+          });
+
+          // Close account on background click
+          account.addEventListener("click", (e) => {
+            if (e.target === account) {
+              account.classList.remove("open");
+            }
+          });
+        });
+    </script>
   </body>
 </html>

@@ -1,3 +1,32 @@
+/* =========================
+   GLOBAL APP PADDING SYSTEM
+   MOBILE FIRST SPACING CONTROL
+   ========================= */
+
+/*
+  This creates a consistent "app container feel"
+  so content never touches screen edges on mobile
+*/
+
+:root {
+  --app-padding: 16px;
+}
+
+/* Apply safe screen padding globally */
+body {
+  margin: 0;
+  padding: var(--app-padding);
+}
+
+/* Prevent topbar from double-padding visually */
+.topbar {
+  margin-top: 8px;
+}
+
+/* Optional: keep main content aligned cleanly */
+main {
+  padding-top: 12px;
+}
 /* <!-- THIS IS THE LANDING PAGE OF THE APP --> */
 .hero {
   top: 72px;
@@ -1329,44 +1358,42 @@ input[type="number"] {
   border-color: rgba(0, 200, 83, 0.35);
 }
 /* ==========================================
-   RESPONSIVE SYSTEM + MOTION LAYER
-   NI MBAYA adaptive layout + subtle energy
+   NI MBAYA RESPONSIVE SYSTEM (FIXED PRIMARY VERSION)
+   Keeps mobile behavior stable + fixes hamburger + account bugs
    ========================================== */
 
 /* =========================
-   TABLET + DESKTOP LAYOUTS
+   1. TABLET + DESKTOP LAYOUTS (SAFE FIXED VERSION)
    ========================= */
 
-/* Desktop enhancement */
+/*
+  IMPORTANT RULE:
+  DO NOT change nav structure on desktop.
+  ONLY adjust spacing, sizing, and alignment.
+*/
+
 @media (min-width: 768px) {
+  /* Topbar spacing only */
   .topbar {
-    padding: 32px 0 14px;
+    padding: 18px 0;
   }
 
+  /* Hamburger stays top-right, NOT centered */
   .nav-toggle {
-    display: none;
+    display: flex;
+    margin-left: auto;
   }
+
+  /* ❌ FIX: REMOVE "display: flex + static" override
+     We keep mobile dropdown behavior active always */
 
   .nav-links {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    gap: 18px;
-    width: auto;
-    margin-top: 0;
-    padding: 0;
-    background: transparent;
-    border: none;
-    opacity: 1;
-    transform: none;
+    /* ONLY override size, NOT behavior */
+    max-width: 280px;
+    font-size: 0.95rem;
   }
 
-  .nav-links a {
-    white-space: nowrap;
-  }
-
-  /* HERO GRID */
+  /* HERO GRID (safe enhancement only) */
   .hero {
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
@@ -1381,96 +1408,80 @@ input[type="number"] {
   }
 
   .hero-stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .hero-visual {
     min-height: 520px;
   }
 
-  /* PANIC SECTION LAYOUT */
+  /* SECTION LAYOUTS */
   .panic-card {
     grid-template-columns: 0.95fr 0.9fr;
-    align-items: center;
   }
 
-  /* SAVINGS SECTION LAYOUT */
   .savings-shell {
     grid-template-columns: 1fr 1.3fr;
   }
 }
 
 /* =========================
-   MOTION SYSTEM (NI MBAYA ENERGY FLOW)
+   2. MOTION SYSTEM (UNCHANGED - CLEAN)
    ========================= */
 
-/* Floating energy = “discipline breathing” feel */
 @keyframes float {
   0% {
     transform: translateY(0px);
   }
-
   50% {
     transform: translateY(-10px);
   }
-
   100% {
     transform: translateY(0px);
   }
 }
 
-/* Subtle pulse for attention elements (CTAs, alerts) */
 @keyframes pulse-glow {
   0% {
     box-shadow: 0 0 0 rgba(0, 200, 83, 0);
   }
-
   50% {
     box-shadow: 0 0 25px rgba(0, 200, 83, 0.25);
   }
-
   100% {
     box-shadow: 0 0 0 rgba(0, 200, 83, 0);
   }
 }
 
-/* Soft fade-in for sections */
 @keyframes fade-up {
   from {
     opacity: 0;
     transform: translateY(12px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Utility animation classes */
 .animate-float {
   animation: float 5s ease-in-out infinite;
 }
-
 .animate-pulse {
   animation: pulse-glow 2.5s ease-in-out infinite;
 }
-
 .animate-fade {
   animation: fade-up 0.6s ease-out forwards;
 }
 
 /* =========================
-   ACCESSIBILITY (IMPORTANT)
+   3. ACCESSIBILITY (UNCHANGED)
    ========================= */
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    scroll-behavior: auto !important;
-  }
-
-  * {
     animation: none !important;
     transition: none !important;
+    scroll-behavior: auto !important;
   }
 }
